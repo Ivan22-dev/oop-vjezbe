@@ -1,0 +1,6 @@
+﻿  Vjezba2-Zad2.cpp
+C:\Users\Ivan\source\repos\Vjezba2-Zad2\Vjezba2-Zad2\Vjezba2-Zad2.cpp(14,2): warning C4091: 'typedef ': ignored on left of 'Rectangle' when no variable is declared
+C:\Users\Ivan\source\repos\Vjezba2-Zad2\Vjezba2-Zad2\Vjezba2-Zad2.cpp(21,2): warning C4091: 'typedef ': ignored on left of 'Circle' when no variable is declared
+C:\Users\Ivan\source\repos\Vjezba2-Zad2\Vjezba2-Zad2\Vjezba2-Zad2.cpp(29,16): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\Ivan\source\repos\Vjezba2-Zad2\Vjezba2-Zad2\Vjezba2-Zad2.cpp(30,12): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  Vjezba2-Zad2.vcxproj -> C:\Users\Ivan\source\repos\Vjezba2-Zad2\Debug\Vjezba2-Zad2.exe
