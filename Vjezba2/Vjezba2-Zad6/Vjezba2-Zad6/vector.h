@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 /*vector_new, vector_delete, vector_push_back, vector_pop_back,
 vector_front, vector_back i vector_size.*/
@@ -9,6 +9,12 @@ vector_front, vector_back i vector_size.*/
 #include <iostream>
 #include <algorithm>
 using namespace std;
+/*Definirati strukturu koja opisuje vektor.Struktura se sastoji od niza int
+elemenata, logičke i fizičke veličine niza.Fizička veličina je inicijalno init, a
+kada se ta veličina napuni vrijednostima, alocira se duplo.
+Napisati funkcije vector_new, vector_delete, vector_push_back, vector_pop_back,
+vector_front, vector_back i vector_size.*/
+
 
 typedef struct Vector {
 	int* arr;

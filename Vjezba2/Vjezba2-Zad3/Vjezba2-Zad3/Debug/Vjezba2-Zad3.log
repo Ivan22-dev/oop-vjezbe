@@ -1,2 +1,2 @@
 ﻿  Vjezba2-Zad3.cpp
-  Vjezba2-Zad3.vcxproj -> C:\Users\Ivan\source\repos\Vjezba2-Zad3\Debug\Vjezba2-Zad3.exe
+C:\Vjezbe objektno\Vjezba2\Vjezba2-Zad3\Vjezba2-Zad3\Vjezba2-Zad3.cpp(14,22): error C2106: '+=': left operand must be l-value

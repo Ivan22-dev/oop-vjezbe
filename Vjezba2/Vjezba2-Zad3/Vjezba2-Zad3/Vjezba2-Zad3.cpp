@@ -4,7 +4,7 @@ using namespace std;
 /*Napisati funkciju koja vraæa referencu na neki element niza. Koristeæi povratnu
 vrijednost funkcije kao lvalue uveæajte i-ti element niza za jedan.*/
 
-int& fun(int *arr,int index,int len) {
+int fun(int *arr,int index,int len) {
 	return arr[index];
 }
 
