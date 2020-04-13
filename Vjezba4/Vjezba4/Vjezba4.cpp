@@ -1,8 +1,6 @@
-
 #include "Vjezba4.h""
 int main() {
 	deck spil;
-
 	cout << "Koliko zelite igraca?" << endl;
 	int broj_igraca;
 	cin >> broj_igraca;
@@ -22,7 +20,6 @@ int main() {
 		for (int j = 0; j < 10; j++) {
 			igraci.at(i).comb.push_back(spil.karte.back());
 			spil.karte.pop_back();
-
 		}
 	}
 	for (int i = 0; i < igraci.size(); i++) {

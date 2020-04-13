@@ -1,23 +1,17 @@
 #pragma once
 #ifndef Vjezba4
-
 #include <iostream>
 #include<vector>
 #include<string>
 #include<random>
 using namespace std;
-
-
 enum class zog : int { Dinari = 0, Kupe = 1, Spadi = 2, Bastoni = 3 };
-
-
 class card {
 public:
 	vector<int> numbers = { 1,2,3,4,5,6,7,11,12,13 };
 	zog vrsta;
 	int number;
 };
-
 class player {
 public:
 	string name;
@@ -29,15 +23,11 @@ public:
 		num_points = 0;
 	}
 };
-
-
 class deck {
 public:
 	vector<card> karte;
-
 	void shuffle1();
 };
-
 void deck::shuffle1() {
 	vector<card> kupe;
 	for (int i = 0; i < 10; i++) {
@@ -67,19 +57,14 @@ void deck::shuffle1() {
 		karta.vrsta = zog::Bastoni;
 		kupe.push_back(karta);
 	}
-
 	karte.assign(bastoni.begin(), bastoni.end());
 	karte.assign(spade.begin(), spade.end());
 	karte.assign(dinari.begin(), dinari.end());
 	karte.assign(kupe.begin(), kupe.end());
-
 	random_device random_dev;
 	mt19937       generator(random_dev());
 	shuffle(karte.begin(), karte.end(), generator);
-
-
 }
-
 bool player::akuza() {
 	int jedan = 0, dva = 0, tri = 0;
 	for (int i = 0; i < comb.size(); i++) {
@@ -106,7 +91,6 @@ bool player::akuza() {
 		this->num_points += tri;
 		ak = true;
 	}
-
 	return ak;
 
 }
@@ -115,7 +99,6 @@ bool player::napolitana() {
 	vector<card> spade;
 	vector<card> dinari;
 	vector<card> bastoni;
-
 	for (int i = 0; i < comb.size(); i++) {
 		if (comb.at(i).vrsta == zog::Bastoni) {
 			bastoni.push_back(comb.at(i));
@@ -141,7 +124,6 @@ bool player::napolitana() {
 			br_kupe++;
 		}
 	}
-
 	for (int i = 0; i < spade.size(); i++) {
 		if (spade.at(i).number == 1 || spade.at(i).number == 2 || spade.at(i).number == 3) {
 			br_spade++;
@@ -170,7 +152,5 @@ bool player::napolitana() {
 		ak = true;
 	}
 	return ak;
-
 }
-
 #endif
