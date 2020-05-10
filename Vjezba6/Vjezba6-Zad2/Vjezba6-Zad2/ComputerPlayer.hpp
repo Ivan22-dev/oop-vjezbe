@@ -10,5 +10,6 @@ public:
 	ComputerPlayer();
 	~ComputerPlayer();
 	std::vector<int> getKombinacije();
+	void odaberiKovanice();
 };
 #endif

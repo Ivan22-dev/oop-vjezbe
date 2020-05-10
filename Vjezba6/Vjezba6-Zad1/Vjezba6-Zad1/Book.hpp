@@ -13,6 +13,5 @@ public:
 	std::string getAutor();
 	std::string getNaslovKnjige();
 	int getGodinaIzdanja();
-
 };
 #endif

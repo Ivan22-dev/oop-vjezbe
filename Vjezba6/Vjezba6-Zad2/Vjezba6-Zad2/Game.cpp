@@ -21,42 +21,7 @@ void Game::igraj() {
 		for (int i = 0; i < igraci.size(); i++)
 		{
 			igraci.at(i)->resetKovanice();
-			if (!igraci.at(i)->isComputerPlayer()) {
-				cout << "Igrac: " << igraci.at(i)->getImeIgraca() << endl;
-				string odgovor;
-				cout << "Zelite li kovanicu od 1 kune" << endl;
-				cin >> odgovor;
-				if (odgovor == "da") {
-					igraci.at(i)->setKovanice(1);
-				}
-				cout << "Zelite li kovanicu od 2 kune" << endl;
-				cin >> odgovor;
-				if (odgovor == "da") {
-					igraci.at(i)->setKovanice(2);
-				}
-				cout << "Zelite li kovanicu od 5 kuna" << endl;
-				cin >> odgovor;
-				if (odgovor == "da") {
-					igraci.at(i)->setKovanice(5);
-				}
-
-				cout << "Koliko je ukupan zbroj po ruci?" << endl;
-				int zbroj;
-				cin >> zbroj;
-				igraci.at(i)->setZbrojSvihKovanica(zbroj);
-			}
-			else {
-				int rand1, rand2;
-				ComputerPlayer* comp = (ComputerPlayer*)igraci.at(i);
-				std::random_device rd; // obtain a random number from hardware
-				std::mt19937 eng(rd()); // seed the generator
-				std::uniform_int_distribution<> distr(0, comp->getKombinacije().size());
-				rand1=comp->getKombinacije().at(distr(eng));
-				igraci.at(i)->setKovanice(rand1);
-				std::uniform_int_distribution<> distr2(rand1, 16);
-				rand2 = distr2(eng);
-				igraci.at(i)->setZbrojSvihKovanica(rand2);
-			}
+			igraci.at(i)->odaberiKovanice();
 		}
 		int ukupanZbroj = 0;
 		for (int i = 0; i < igraci.size(); i++) {

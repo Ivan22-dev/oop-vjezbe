@@ -7,5 +7,7 @@ class HumanPlayer :Player {
 public:
 	HumanPlayer(std::string);
 	~HumanPlayer();
+	void odaberiKovanice();
+
 };
 #endif

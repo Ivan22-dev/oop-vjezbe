@@ -1,9 +1,8 @@
 #include "Player.hpp"
 using namespace std;
 
-Player::Player(string ime,bool comp) {
+Player::Player(string ime) {
 	imeIgraca = ime;
-	computerPlayer = comp;
 	brojBodova = 0;
 	kovanice = 0;
 }
@@ -18,9 +17,6 @@ void Player::povecajBrojBodova() {
 	brojBodova++;
 }
 
-bool Player::isComputerPlayer() {
-	return this->computerPlayer;
-}
 
 void Player::setKovanice(int kovanica) {
 	kovanice += kovanica;
